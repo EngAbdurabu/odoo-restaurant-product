@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="product_template_restaurant_view" model="ir.ui.view">
+            <field name="name">product.template.common.inherit.restaurant_product</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="x_product_weight"/>
+                    <field name="x_product_expired_date"/>
+                </xpath>
+                <xpath expr="//field[@name='categ_id']" position="before">
+                    <field name="x_product_calerise"/>
+                </xpath>
+            </field>
+        </record>
+        <!-- show field in Kanban view -->
+        <record id="product_template_restaurant_kanban_view" model="ir.ui.view">
+            <field name="name">product.template.common.inherit.kanban_view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_kanban_view"/>
+            <field name="arch" type="xml">
+                <field name="list_price" position="after">
+                    <br/>
+                        <span >
+                            وزن المنتج : <field name="x_product_weight" string=" وزن المنتج"/>
+                            <br/>
+                        تاريخ الانتهاء: <field name="x_product_expired_date" string="تاريخ الانتهاء "/>
+                        </span>
+
+                </field>
+            </field>
+        </record>
+        <!--  add filter to view -->
+        <record id="product_template_restaurant_search_view" model="ir.ui.view">
+            <field name="name">product.template.common.inherit.search.restaurant_product</field>
+            <field name="model">product.template</field>
+            <field name="type">search</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='services']" position="after">
+                    <filter string="وجبات كبيرة" name="filter_to_product_weight" domain="[('x_product_weight','&gt;', '200')]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- create window Action with context -->
+        <record id="product_template_restaurant_view_action" model="ir.actions.act_window">
+            <field name="name">الوجبات الكبيرة </field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="context">
+                {'search_default_filter_to_product_weight':1}
+            </field>
+            <field name="help" type="html">
+                <p  class="o_view_nocontent_smiling_face">
+                    أنشاء منتج كبير لعرضة هنا
+                </p>
+            </field>
+        </record>
+        <menuitem
+            action="product_template_restaurant_view_action"
+            id="action_window"
+            parent="sale.menu_product_template_action"
+            name="الوجبات الكبيرة"
+            sequence="4"/>
+    </data>
+</odoo>
