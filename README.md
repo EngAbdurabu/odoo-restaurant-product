@@ -4,11 +4,25 @@
 
 ---
 
+## Screenshots | صور المشروع
+
+### Product Form | نموذج المنتج
+
+![Product Form](static/description/product_form.png)
+
 ## English
 
 ### Overview
 
 **Restaurant Product** is a custom Odoo module that extends the standard `product.template` model with additional information useful for managing restaurant products and meals.
+
+### Product Kanban | عرض المنتجات
+
+![Product Kanban](static/description/product_kanban.png)
+
+### Large Meals | الوجبات الكبيرة
+
+![Large Meals](static/description/large_meals.png)
 
 ### Features
 
@@ -22,14 +36,14 @@
 
 ### Technical details
 
-| Item | Details |
-|---|---|
-| Module name | `restaurant_product` |
-| Display name | Restaurant Product |
-| Version | `1.0.0` |
-| Odoo model extended | `product.template` |
-| Dependencies | `product`, `sale` |
-| Main files | `models.py`, `views.xml`, `__manifest__.py` |
+| Item                | Details                                     |
+| ------------------- | ------------------------------------------- |
+| Module name         | `restaurant_product`                        |
+| Display name        | Restaurant Product                          |
+| Version             | `1.0.0`                                     |
+| Odoo model extended | `product.template`                          |
+| Dependencies        | `product`, `sale`                           |
+| Main files          | `models.py`, `views.xml`, `__manifest__.py` |
 
 ### Installation
 
@@ -84,14 +98,14 @@ After installation:
 
 ### التفاصيل التقنية
 
-| العنصر | التفاصيل |
-|---|---|
-| اسم الموديول التقني | `restaurant_product` |
-| اسم الموديول | Restaurant Product |
-| الإصدار | `1.0.0` |
-| الموديل الذي تم توسيعه | `product.template` |
-| الاعتماديات | `product`, `sale` |
-| الملفات الأساسية | `models.py`, `views.xml`, `__manifest__.py` |
+| العنصر                 | التفاصيل                                    |
+| ---------------------- | ------------------------------------------- |
+| اسم الموديول التقني    | `restaurant_product`                        |
+| اسم الموديول           | Restaurant Product                          |
+| الإصدار                | `1.0.0`                                     |
+| الموديل الذي تم توسيعه | `product.template`                          |
+| الاعتماديات            | `product`, `sale`                           |
+| الملفات الأساسية       | `models.py`, `views.xml`, `__manifest__.py` |
 
 ### التثبيت
 
@@ -130,4 +144,4 @@ python odoo-bin -d YOUR_DATABASE --addons-path=addons,custom_addons -u restauran
 
 ## Author
 
-**Abumajid**
+**Eng: Abdurabu Mohammed**
