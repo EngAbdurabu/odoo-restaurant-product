@@ -8,7 +8,7 @@
 
 ### Product Form | نموذج المنتج
 
-![Product Form](static/description/product_form.png)
+![Product Form](static/product_form.png)
 
 ## English
 
@@ -18,11 +18,11 @@
 
 ### Product Kanban | عرض المنتجات
 
-![Product Kanban](static/description/product_kanban.png)
+![Product Kanban](static/large_meals.png)
 
 ### Large Meals | الوجبات الكبيرة
 
-![Large Meals](static/description/large_meals.png)
+![Large Meals](static/large_meals.png)
 
 ### Features
 
